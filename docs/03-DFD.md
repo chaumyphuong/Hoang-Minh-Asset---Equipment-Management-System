@@ -1,4 +1,4 @@
-1.	Sơ đồ ngữ cảnh của hệ thống quản lý tài sản thiết bị:
+## 1.	Sơ đồ ngữ cảnh của hệ thống quản lý tài sản thiết bị:
 Mô tả luồng dữ liệu:
 AMS là Hệ thống Quản lý tài sản, người dùng sẽ có thể truy xuất dữ liệu:
 -	Đối với nhân viên thuộc phòng Hành chính – Nhân sự:	
@@ -18,7 +18,7 @@ o	Khi yêu cầu báo cáo, hệ thống xuất ra bản báo cáo dựa theo y�
 -	Nhân viên.
 -	Lãnh đạo: có quyền hành thao tác chỉnh sửa dữ liệu.
 
-2.	Sơ đồ luồng dữ Liệu cấp 0 (DFD cấp 0):
+## 2.	Sơ đồ luồng dữ Liệu cấp 0 (DFD cấp 0):
  Mô tả luồng dữ liệu:
 Hệ thống có 7 chức năng:
 1.	Chức năng quản lý thông tin thiết bị tài sản.
@@ -43,8 +43,8 @@ Lãnh đạo gửi yêu cầu báo cáo, dữ liệu từ dữ liệu TBTS và d
 -	7.0 Tìm kiếm: 
 Nhân viên nhập tìm kiếm thông tin và hệ thống trả về kết quả thông tin thiết bị tài sản và tình trạng dựa vào dữ liệu TBTS.
 
-3.	Sơ đồ luồng dữ Liệu cấp 1 (DFD cấp 1):
-3.1.	Sơ đồ DFD cấp 1 cho chức năng quản lý thông tin thiết bị tài sản:
+## 3.	Sơ đồ luồng dữ Liệu cấp 1 (DFD cấp 1):
+### 3.1.	Sơ đồ DFD cấp 1 cho chức năng quản lý thông tin thiết bị tài sản:
 Mô tả luồng dữ liệu:
 Trong chức năng quản lý thông tin thiết bị tài sản, phân thành 4 chức năng chính:
 -	1.1. Xem danh sách thiết bị tài sản: 
@@ -61,7 +61,7 @@ o	Thao tác xem thông tin thiết bị tài sản.
 o	Thêm thông tin thiết bị tài sản.
 o	Xóa thông tin thiết bị tài sản.
 
-3.2.	Sơ đồ DFD cấp 1 cho chức năng quản lý việc bàn giao thiết bị tài sản:
+### 3.2.	Sơ đồ DFD cấp 1 cho chức năng quản lý việc bàn giao thiết bị tài sản:
 Mô tả luồng dữ liệu:
 Trong chức năng quản lý việc bàn giao thiết bị tài sản, phân thành 5 chức năng chính:
 -	2.1. Đăng ký bàn giao thiết bị tài sản: 
@@ -83,7 +83,7 @@ o	Bàn giao thiết bị tài sản cho nhân viên.
 o	Thao tác xem biên bản giao được đăng ký, có thể thao tác hủy giao.
 o	Thao tác xác nhận đã giao.
 
-3.3.	Sơ đồ DFD cấp 1 cho chức năng quản lý việc giao nhận hoàn trả thiết bị tài sản:
+### 3.3.	Sơ đồ DFD cấp 1 cho chức năng quản lý việc giao nhận hoàn trả thiết bị tài sản:
 Mô tả luồng dữ liệu:
 Trong chức năng quản lý việc giao nhận hoàn trả thiết bị tài sản, phân thành 6 chức năng chính:
 -	3.1. Đăng ký hoàn trả thiết bị tài sản: 
@@ -108,7 +108,7 @@ o	Thao tác kiểm tra và cập nhật tình trạng thiết bị tài sản.
 -	Nhân viên:
 o	Thao tác xem biên hoàn trả được đăng ký, có thể thao tác hủy trả.
 
-3.4.	Sơ đồ DFD cấp 1 cho chức năng thống kê báo cáo danh sách tài sản thiết bị theo dự án:
+### 3.4.	Sơ đồ DFD cấp 1 cho chức năng thống kê báo cáo danh sách tài sản thiết bị theo dự án:
 Mô tả luồng dữ liệu:
 Trong chức năng thống kê báo cáo danh sách tài sản thiết bị theo dự án, phân thành 3 chức năng chính:
 -	4.1. Nhập yêu cầu: 
@@ -123,7 +123,7 @@ o	Nhập yêu cầu.
 o	Chọn dự án cần thống kê.
 o	Xem báo cáo.
 
-3.5.	Sơ đồ DFD cấp 1 cho chức năng thống kê báo cáo danh sách tài sản thiết bị theo tình trạng:
+### 3.5.	Sơ đồ DFD cấp 1 cho chức năng thống kê báo cáo danh sách tài sản thiết bị theo tình trạng:
 Mô tả luồng dữ liệu:
 Trong chức năng thống kê báo cáo danh sách tài sản thiết bị theo tình trạng, phân thành 3 chức năng chính:
 -	5.1. Nhập yêu cầu: 
@@ -137,7 +137,7 @@ Từ yêu cầu chọn tình trạng thiết bị tài sản, hệ thống hiệ
 o	Chọn tình trạng thiết bị tài sản cần thống kê.
 o	Xem báo cáo.
 
-3.6.	Sơ đồ DFD cấp 1 cho chức năng thống kê báo cáo danh sách tài sản thiết bị hết giá trị khấu hao:
+### 3.6.	Sơ đồ DFD cấp 1 cho chức năng thống kê báo cáo danh sách tài sản thiết bị hết giá trị khấu hao:
 Mô tả luồng dữ liệu:
 Trong chức năng thống kê báo cáo danh sách tài sản thiết bị hết giá trị khấu hao, phân thành 2 chức năng chính:
 -	6.1. Nhập yêu cầu: 
@@ -149,7 +149,7 @@ Từ yêu cầu chọn tình trạng thiết bị tài sản, hệ thống hiệ
 o	Nhập yêu cầu.
 o	Xem báo cáo.
 
-3.7.	Sơ đồ DFD cấp 1 cho chức năng tra tìm thông tin và tình trạng của thiết bị: 
+### 3.7.	Sơ đồ DFD cấp 1 cho chức năng tra tìm thông tin và tình trạng của thiết bị: 
 Mô tả luồng dữ liệu:
 Trong chức năng tra tìm thông tin và tình trạng của thiết bị, phân thành 3 chức năng chính:
 -	7.1. Tìm kiếm: 
@@ -164,10 +164,10 @@ o	Nhập từ khóa tìm kiếm.
 o	Chọn điều kiện lọc.
 o	Xem kết quả tìm kiếm.
 
-4.	Sơ đồ DFD cấp 2:
-4.1.	Sơ đồ DFD cấp 2 cho chức năng quản lý thông tin thiết bị tài sản:
+## 4.	Sơ đồ DFD cấp 2:
+### 4.1.	Sơ đồ DFD cấp 2 cho chức năng quản lý thông tin thiết bị tài sản:
  Chức năng 1.1. Xem danh sách TBTS phân rã thêm chức năng 1.1.1. Xem thông tin chi tiết, thông tin chi tiết của thiết bị được lấy từ dữ liệu TBTS.
-4.2. Sơ đồ DFD cấp 2 cho chức năng quản lý việc bàn giao thiết bị tài sản:
+### 4.2. Sơ đồ DFD cấp 2 cho chức năng quản lý việc bàn giao thiết bị tài sản:
 - Chức năng 2.1. Đăng ký bàn giao thiết bị tài sản phân rã thêm chức năng:
 o	2.1.1. Đăng ký bàn giao TBTS: điền thông tin bàn giao.
 o	2.1.2. Danh sách thêm TBTS: để chọn thiết bị tài sản cần giao.
@@ -175,7 +175,7 @@ o	2.1.3. Gửi yêu cầu: hoàn tất việc đăng ký.
 - Chức năng 2.3. Xác nhận yêu cầu phân rã thêm chức năng:
 o	2.3.1. Xác nhận hủy: khi nhân viên yêu cầu hủy, nhân viên có thể xác nhận yêu cầu hủy và không giao thiết bị tài sản.
 o	2.3.2. Xác nhận bàn giao: nhân viên xác nhận biên bản giao và chuẩn bị thiết bị tài sản để giao.
-4.3.	Sơ đồ DFD cấp 2 cho chức năng quản lý việc giao nhận hoàn trả thiết bị tài sản:
+### 4.3.	Sơ đồ DFD cấp 2 cho chức năng quản lý việc giao nhận hoàn trả thiết bị tài sản:
 -	Chức năng 3.3. Xác nhận yêu cầu phân rã thêm chức năng:
 o	3.3.1. Xác nhận hủy: khi nhân viên yêu cầu hủy, nhân viên có thể xác nhận yêu cầu hủy và không thu hồi thiết bị tài sản.
 o	3.3.2. Xác nhận trả: nhân viên xác nhận biên bản trả và chuẩn bị để thu hồi thiết bị tài sản.
