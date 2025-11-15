@@ -1,0 +1,103 @@
+1.	Lược đồ mô hình thực thể (Entity Relation Diagram – ERD):
+Lược đồ bao gồm 7 thực thể:
+-	Tài sản.
+-	Nhân viên.
+-	Phòng ban.
+-	Dự án.
+-	Tài khản.
+-	Biên bản giao.
+-	Biên bản trả.
+Các thực thể liên kết với nhau:
+- Thiết bị tài sản có thành phần thiết bị con của thiết bị khác, những thành phần thiết bị con đó là linh kiện, thiết bị con. Do cùng là thiết bị tài sản nên đều có mã tài sản, quan hệ chính bảng đó, và mối quan hệ là N - N.
+- Nhân viên và Phòng ban là mối quan hệ 1 – N.
+- Nhân viên và Dự án là mối quan hệ N – N: một nhân viên có thể tham gia nhiều dự án và một dự án có nhiều nhân viên tham gia, mối quan hệ có thêm thuộc tính vai trò – vai trò của mỗi nhân viên trong dự án đó.
+- Nhân viên và Tài khoản là mối quan hệ 1 – 1: một nhân viên có một tài khoản.
+- Nhân viên và Tài sản là mối quan hệ 1 – N, mối quan hệ sinh ra bảng biên bản giao và bảng biên bảng trả.
+
+2.	Lược đồ sơ đồ dữ liệu 
+Lược đồ gồm 9 bảng dữ liệu:
+1.	Bảng tai_san.
+2.	Bảng thietbi_con.
+3.	Bảng nhan_vien.
+4.	Bảng tai_khoan.
+5.	Bảng phongban.
+6.	Bảng tham_gia.
+7.	Bảng du_an.
+8.	Bảng tai_khoan.
+9.	Bảng bienban_giao.
+10.	Bảng bienban_tra.
+- Dữ liệu TBTS được lấy dữ liệu từ bảng tai_san, bảng thietbi_con.
+- Dữ liệu giao TBTS được lấy dữ liệu từ bảng bienban_giao và bảng bienban_tra.
+
+3.	Bảng dữ liệu:
+3.1. Bảng tài sản (tai_san):
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maTB	char	4	Not null	Mã thiết bị (khóa chính)
+tenTB	nvarchar	35	Not null	Tên thiết bị
+tgmua	date		Not null	Thời gian mua
+tgkhauhao	date		Not null	Thời gian khấu hao (tính theo năm)
+loai	nvarchar	25	Null	Loại thiết bị, tài sản
+Tinhtrang	nvarchar	70	Not null	Tình trạng tài sản
+chiphi	money		Not null	Chi phí mua tài sản
+mota	nvarchar	200	Null	Mô tả tài sản
+HDSD	nvarchar	300	Null	Hướng dẫn sử dụng
+maNV	char	4	Not null	Mã nhân viên (Khóa ngoại)
+
+3.2.	Bảng dự án (du_an):
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maDA	char	4	Not null	Mã dự án (khóa chính)
+tenDA	nvarchar	40	Not null	Tên dự án
+mota	nvarchar	200	Null	Mô tả dự án
+khachhang	nvarchar	40	Null	Khách hàng của dự án
+ngaybatdau	date		Not null	Ngày bắt đầu thực hiện
+ngayketthuc	date		Not null	Ngày kết thúc dự án
+
+3.3.	Bảng phòng ban (phong_ban):
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maPB	char	4	Not null	Mã phòng ban (khóa chính)
+tenphong	nvarchar	30	Not null	Tên phòng ban
+
+3.4.	Bảng nhân viên (nhan_vien):
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maNV	char	4	Not null	Mã nhân viên (khóa chính)
+ho	nvarchar	15	Not null	Họ của nhân viên
+tendem	nvarchar	30	Null	Tên đệm của nhân viên
+ten	nvarchar	15	Not null	Tên nhân viên
+diachi	nvarchar	100	Not null	Địa chỉ nơi ở
+chucvu	nvarchar	25	Not null	Chức vụ
+SDT	varchar	12	Not null	Số điện thoại nhân viên
+gioitinh	char	1	Not null	Giới tính nhân viên
+ngaysinh	date		Null	Ngày sinh của nhân viên
+luong	money		Not null	Lương của nhân viên
+maphong	char	4	Not null	Mã phòng ban (Khóa ngoại)
+
+3.5.	Bảng tài khoản (tai_khoan):
+Bảng 7. Bảng tài khoản
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+tenTK	varchar	20	Not null	Tên tài khoản
+matkhau	varchar	20	Not null	Mật khẩu tài khoản
+maNV	char	4	Not null	Mã nhân viên (Khóa ngoại)
+
+3.6.	Bảng biên bản giao (bienban_giao):
+Bảng 8. Bảng biên bản giao
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maNV	char	4	Not null	Mã nhân viên nhận (khóa chính)
+tggiao	date		Not null	Thời gian giao
+maNVgiao	char	4	Not null	Mã nhân viên giao (Khóa ngoại)
+maTB	char	4	Not null	Mã thiết bị giao (khóa ngoại)
+
+3.7.	Bảng biên bản trả (bienban_tra):
+Bảng 9. Bảng biên bản trả
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maNV	char	4	Not null	Mã nhân viên trả (khóa chính)
+tgtra	date		Not null	Thời gian trả
+maNVnhan	char	4	Not null	Mã nhân viên nhận (khóa ngoại)
+tinhtrangtra	nvarchar	25	Not null	Tình trạng trả
+maTB	char	4	Not null	Mã thiết bị (khóa ngoại)
+
+3.8.	Bảng tham gia (tham_gia):
+Bảng 10. Bảng tham gia
+Tên thuộc tính	Kiểu dữ liệu	Độ dài	Null/Not null	Mô tả
+maDA	char	4	Not null	Mã dự án (khóa chính)
+maNV	char	4	Not null	Mã nhân viên (khóa chính)
+vaitro	nvarchar	25	Null	Vai trò nhân viên trong dự án
