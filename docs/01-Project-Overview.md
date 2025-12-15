@@ -9,7 +9,7 @@ The client is Hoang Minh Company, a company specializing in implementing e-gover
 ## Requirements Description:
 According to the client's requirements, the Asset Management System will need to have:
 ### Functional Requirements:
-- The asset information management function includes: Equipment code; Equipment name; Description; Asset value; Purchase date; Depreciation period (according to accounting regulations); Sub-components of the equipment; Sub-components of the equipment that can be replaced are also considered as separate asset equipment and have their own equipment code.
+The asset information management function includes: Equipment code; Equipment name; Description; Asset value; Purchase date; Depreciation period (according to accounting regulations); Sub-components of the equipment; Sub-components of the equipment that can be replaced are also considered as separate asset equipment and have their own equipment code.
 
 - Asset and equipment handover management function: handing over assets and equipment to project teams for project execution.
 
@@ -30,3 +30,4 @@ According to the client's requirements, the Asset Management System will need to
 - Flexibility in system access.
 
 - System development and deployment time should not exceed 3 months.
+
