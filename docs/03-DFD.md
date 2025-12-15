@@ -1,6 +1,4 @@
 # Data Flow Diagram (DFD)
-## Asset & Equipment Management System
-
 ---
 
 ## 1. Context Diagram
