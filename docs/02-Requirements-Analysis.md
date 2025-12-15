@@ -1,47 +1,133 @@
-# Requirements Gathering
-During the first few weeks of work, we contacted and gathered requirements from our client, Bui Ngoc Le. The questions we asked the client to gather requirements included:
-1. What is the process for handing over equipment to project teams for construction?
+# Requirements Gathering & Analysis
+---
 
-2. What is the process for receiving and returning system equipment?
+## 1. Requirements Gathering
 
-3. How is equipment condition assessed?
+During the initial phase of the project, requirements were gathered through direct discussions with the client representative, **Mr. Bui Ngoc Le**.
 
-4. What are the tasks and functions of each department? (For example, what does the IT department do?)
+The objective of this phase was to understand the current asset and equipment management process, identify pain points, and clarify business rules.
 
-5. What happens if equipment reaches the end of its depreciation period? (Is it replaced, is it still in use...?)
+The key questions used for requirement elicitation included:
 
-## Requirements Analysis
-**1. What is the process for handing over equipment to project teams for construction?**
+1. What is the process for handing over equipment to project teams?
+2. What is the process for receiving and returning equipment?
+3. How is the condition of equipment assessed?
+4. What are the roles and responsibilities of each department?
+5. What happens when equipment reaches the end of its depreciation period?
 
-- When executing the project, employees will contact the HR department to receive the assets they need. - When the equipment is handed over, the HR department will record in the system which employee received it.
+---
 
-- When the employee receives the equipment, they will confirm receipt in the system, and the handover is complete.
+## 2. Requirements Analysis
 
-**2. How does the equipment receiving and returning process work?**
+### 2.1 Equipment Handover Process
 
-- Step 1: The employee who wants to return the equipment registers the handover in the system.
+**Business Description**
 
-- Step 2: The HR department staff will check the asset, update the equipment status, and record it as handed over to the HR department for management.
+When a project is executed, employees contact the Administration and Human Resources Department to request the assets and equipment required for construction or operational activities.
 
-- Step 3: After confirmation, the equipment has been returned to the HR department.
+**Process Flow**
+- Employees submit an equipment handover request through the system.
+- The HR department records which employee receives each asset.
+- After receiving the equipment, the employee confirms receipt in the system.
+- Once confirmed, the handover process is completed.
 
-**3. How is the equipment's condition assessed?**
+**Business Rules**
+- Each asset must be associated with a specific employee during handover.
+- Asset quantity and status must be updated after handover confirmation.
 
-- The assessment is based on the recipient's opinion.
+---
 
-- For example: If the recipient finds the equipment unusable, the status will be updated to "Unusable".
+### 2.2 Equipment Return Process
 
-**4. What are the tasks and functions of each department?**
+**Business Description**
 
-- The five departments constitute the company's organizational structure.
+Employees are required to return equipment when it is no longer needed or upon project completion.
 
-- The system's operational procedures are already described.
+**Process Flow**
+1. The employee registers an equipment return request in the system.
+2. HR department staff verify the returned asset and update its status.
+3. The system records the asset as returned and managed by the HR department.
 
-**5. What happens if an asset or equipment reaches the end of its depreciation period?** (Is it replaced, or does it continue to be used...?)
+**Business Rules**
+- Returned assets must be inspected before status updates.
+- Only HR staff can confirm asset returns.
 
-- When purchased, the depreciation period for an asset is determined according to general regulations.
+---
 
-- If the asset has been used beyond that period, it is considered to have reached the end of its depreciation period. However, an asset that has reached the end of its depreciation period can still be used normally if it is still usable.
+### 2.3 Equipment Condition Assessment
 
-- The state of asset depreciation only has significance for calculating the asset's value for accounting purposes.
+**Business Description**
 
+Equipment condition is assessed during both handover and return processes.
+
+**Assessment Criteria**
+- The assessment is based on the condition observed by the receiving party.
+- Possible condition statuses include:
+  - Usable
+  - Damaged
+  - Unusable
+
+**Business Rules**
+- If equipment is assessed as "Unusable", it cannot be handed over again.
+- Condition updates must be recorded in the system.
+
+---
+
+### 2.4 Department Roles and Responsibilities
+
+**Business Description**
+
+The organization consists of multiple departments with clearly defined responsibilities.
+
+**Key Roles**
+- **Administration & Human Resources Department**
+  - Manage asset and equipment information
+  - Confirm handover and return requests
+  - Update asset status and quantity
+
+- **Employees**
+  - Request asset handover
+  - Confirm receipt of assets
+  - Register asset return requests
+
+- **Management**
+  - View reports and statistics
+  - Monitor asset usage and depreciation status
+
+**Business Rules**
+- Only authorized departments can edit asset data.
+- Employees have read-only access to general asset information.
+
+---
+
+### 2.5 Asset Depreciation Handling
+
+**Business Description**
+
+Each asset is assigned a depreciation period at the time of purchase, based on standard accounting regulations.
+
+**Business Rules**
+- When an asset reaches the end of its depreciation period, it is marked as "Fully Depreciated".
+- Fully depreciated assets can continue to be used if they remain functional.
+- Depreciation status is used for accounting and reporting purposes only.
+- Depreciation status does not automatically prevent asset usage.
+
+---
+
+## 3. Summary
+
+This requirements gathering and analysis phase helped define:
+- Core asset management processes
+- Department responsibilities
+- Key business rules related to asset lifecycle and depreciation
+
+The results of this phase serve as the foundation for:
+- System requirement specification (SRS)
+- Data flow diagrams (DFD)
+- Database design
+- UI wireframes and prototypes
+
+---
+
+## Keywords
+Requirements Gathering · Requirements Analysis · Business Rules · Asset Management · Business Analysis
